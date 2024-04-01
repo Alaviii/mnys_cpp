@@ -16,7 +16,7 @@ int main(void)
     ofstream fichout;
 
     //Entrada de datos
-    fichin.open("C:\\Users\\alexr\\Desktop\\maybe\\tabla.dat");
+    fichin.open("C:\\Users\\alexr\\Desktop\\metodos\\phoenix\\tabla.dat");
     if(fichin.is_open())
     {
         int parejas;
@@ -35,7 +35,7 @@ int main(void)
     }
 
     //Salida de datos
-    fichout.open("C:\\Users\\alexr\\Desktop\\maybe\\lagrange.dat");
+    fichout.open("C:\\Users\\alexr\\Desktop\\metodos\\phoenix\\lagrange.dat");
     if(fichout.is_open())
     {
         double lagrange_input;
