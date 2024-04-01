@@ -8,7 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                "C:\\Users\\alexr\\Desktop\\maybe\\avimatrix.cpp",
+                "${fileDirname}\\avimatrix.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
