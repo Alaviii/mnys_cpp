@@ -85,6 +85,7 @@ void matrix::operator=(matrix matrizcopiada) //parece funcifona
 void matrix::resize(const std::size_t rows, const std::size_t cols) //parece funcifona
 {
     matrix temporaryMatrix(mRows, mCols);
+    
     std::size_t
         tempRows{mRows},
         tempCols{mCols};
