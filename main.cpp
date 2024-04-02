@@ -5,10 +5,10 @@ using namespace std;
 int main(void)
 {
     matrix 
-        matrizuno("C:\\Users\\alexr\\Desktop\\metodos\\phoenix\\matrizuno.dat"),
-        matrizdos("C:\\Users\\alexr\\Desktop\\metodos\\phoenix\\matrizdos.dat"),
+        matrizuno("matrizuno.dat"),
+        matrizdos("matrizdos.dat"),
         matrizresultado(0,0),
-        matrizmax("C:\\Users\\alexr\\Desktop\\metodos\\phoenix\\matrizA.txt");
+        matrizmax("matrizA.txt");
 
     matrizresultado = matrizuno*matrizdos;
     matrizresultado.print();
@@ -17,7 +17,7 @@ int main(void)
     matrizuno.resize(4,4);
     matrizuno.print();
 
-    matrizmax.write("C:\\Users\\alexr\\Desktop\\metodos\\phoenix\\matrizresultado.dat");
+    matrizmax.write("matrizresultado.dat");
 
     return 0;
 }
