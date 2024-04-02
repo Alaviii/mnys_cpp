@@ -8,7 +8,7 @@ int main(void)
         matrizuno("matrizuno.dat"),
         matrizdos("matrizdos.dat"),
         matrizresultado(0,0),
-        matrizmax("matrizA.txt");
+        matrizmax("MatrizA.txt");
 
     matrizresultado = matrizuno*matrizdos;
     matrizresultado.print();
