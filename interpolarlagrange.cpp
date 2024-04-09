@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include <fstream>
 #include <vector>
 
@@ -40,9 +39,9 @@ int main(void)
     {
         double lagrange_input;
         
-        for(lagrange_input=0.4;lagrange_input<=0.8;lagrange_input+=0.01)
+        for(lagrange_input=0.4;lagrange_input<=0.8;lagrange_input+=0.0025)
         {
-            fichout << " " << lagrange(x,y,lagrange_input) << endl;
+            fichout << lagrange_input << " " << lagrange(x,y,lagrange_input) << endl;
         }
 
         fichout.close();
@@ -53,27 +52,30 @@ int main(void)
 
 double lagrange(vector<double> x, vector<double> y, double valor)
 {
-    int n;
-    double lagranger,li,top,bot;
+    int 
+        n = ((x.size())-1) ;
+    double 
+        lagrange_result,
+        lagrange_iesimo,
+        top,
+        bot;
 
-    n = (x.size())-1;
-
-    lagranger = 0;
+    lagrange_result = 0;
 
     for(int i=0;i<=n;i++)
     {
-        li = 1;
+        lagrange_iesimo = 1;
         for(int j=0;j<=n;j++)
         {
             if(j!=i)
             {
                 top = valor - x[j];
                 bot = x[i] - x[j];
-                li *= top/bot;
+                lagrange_iesimo *= top/bot;
             }
         }
-        lagranger += y[i]*li;
+        lagrange_result += y[i]*lagrange_iesimo;
     }
 
-    return lagranger;
+    return lagrange_result;
 }

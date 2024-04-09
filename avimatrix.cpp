@@ -11,7 +11,7 @@ matrix::matrix(std::size_t rows, std::size_t cols) //FUNCIFONA con basicamente t
         v = 0;
 }
 
-matrix::matrix(std::string filename) //no va, segmentation fault con el print incluso
+matrix::matrix(std::string filename)
 {
     std::ifstream matrix_input;
 
@@ -32,8 +32,8 @@ matrix::matrix(std::string filename) //no va, segmentation fault con el print in
     }
     else
     {
-        mRows = mCols = 0;
-        mData.resize(0);
+        mRows = mCols = 1;
+        mData.resize(1);
     }
 
     return;
